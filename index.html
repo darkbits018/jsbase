@@ -1,22 +1,30 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Learning is Fun</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon-img.png">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
-  </head>
-  <body>
-    <div class="ui container">
-      <h1>HTML Page Connected to index.js and JSON data</h1>
-      <form class="ui form" onsubmit="onSubmit(event)">
-        <div class="field">
-          <input id="textField" oninput="inputChanged(event)" class="ui input">
-          <div id="output"></div>
-          <button type="button" class="ui button primary" onclick="showCounts()">Show Data Info</button>
-        </div>
-      </form>
-    </div>
-  </body>
+
+<head>
+  <title>Learning is Fun</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon-img.png">
+  <script src="index.js"></script>
+  <script src="./src/exercise-06Dec2023.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+</head>
+
+<body>
+  <div class="ui container">
+    <h1>HTML Page Connected to index.js and JSON data</h1>
+    <form class="ui form" onsubmit="onSubmit(event)">
+      <div class="field">
+        <input id="textField" oninput="inputChanged(event)" class="ui input">
+        <div id="output"></div>
+        <button type="button" class="ui button primary" onclick="showCounts()">Show Data Info</button>
+        
+        <button onclick="displayCompanyInfo()">Display Company Information</button>
+        <div id="companyInfoContainer"></div>
+      </div>
+    </form>
+  </div>
+</body>
+
 </html>

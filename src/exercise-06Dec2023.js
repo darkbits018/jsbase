@@ -1,6 +1,6 @@
 const companies = [
-  {name: 'Intelliswift', hq: 'Newark, CA', indiaLocations: ['Pune', 'Bengaluru']},
-  {name: 'Salesforce', hq: 'San Francisco, CA', indiaLocations: ['Hyderabad', 'Bengaluru', 'Mumbai', 'Gurugram', 'Jaipur']}
+  { name: 'Intelliswift', hq: 'Newark, CA', indiaLocations: ['Pune', 'Bengaluru'] },
+  { name: 'Salesforce', hq: 'San Francisco, CA', indiaLocations: ['Hyderabad', 'Bengaluru', 'Mumbai', 'Gurugram', 'Jaipur'] }
 ];
 
 /* 
@@ -17,3 +17,25 @@ const companies = [
 
   Hint: You will need to use document.querySelector or document.getElementById and set it's inner HTML to the content.
 */
+
+console.log('Number of companies:', companies.length);
+
+console.log('Name of companies:');
+companies.forEach((company) => console.log(company.name));
+
+console.log('Headquarters of the companies:');
+companies.forEach((company) => console.log(company.hq));
+
+function displayCompanyInfo() {
+  const container = document.getElementById('companyInfoContainer');
+
+  container.innerHTML = '';
+
+  const ul = document.createElement('ul');
+  companies.forEach((company) => {
+    const li = document.createElement('li');
+    li.textContent = `${company.name} - ${company.hq} - ${company.indiaLocations.join(', ')}`;
+    ul.appendChild(li);
+  });
+  container.appendChild(ul);
+}
